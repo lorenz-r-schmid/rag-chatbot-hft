@@ -1,0 +1,367 @@
+[
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   1,
+   2
+  ],
+  "text": "[Seite 1]\nMaschinelles Lernen\n[Seite 2]\nÜbersicht\n•Was ist Maschinelles Lernen?\n•Wie können Daten aussehen?\n•Was kann man mit ihnen machen?"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   3
+  ],
+  "text": "[Seite 3]\nRückblick: Was ist I?\nIntelligenz: „theabilitytoperceiveorinferinformation, andtoretainit\nasknowledge tobeappliedtowardsadaptive behaviors“ (Wikipedia, \n2021)\n•perceive: sehen, hören, Sprache verstehen\n•infer: logisches Schließen, Schließen unter Unsicherheit\n•retain: lernen\n•knowledge: Wissensrepräsentationen\n•tobeapplied: selbstgesteuertes Verhalten\n•adaptive behavior: angemessene Reaktion auf neue Situationen, dabei \nUmsetzen der eigenen Ziele"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   4
+  ],
+  "text": "[Seite 4]\nWas ist Maschinelles Lernen?\nDie Aufgabe: \n•Daten klassifizieren (z.B. Junk-Mail-Filter)\n•Zahlenwerte vorhersagen (z.B. Börsenkurse)\nEine Maschine lernt an Beispielen, eine Aufgabe \nselbständig auszuführen."
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   5
+  ],
+  "text": "[Seite 5]\nWas ist Maschinelles Lernen?\nDie Aufgabe: Daten klassifizieren\n•Beispieldaten werden gegeben\n•Datenpunkte haben Attribute und eine Zielklasse\n•Computer sucht Regelmäßigkeiten: Wann wird ein \nDatenpunkt einer Klasse zugeordnet?\n•Anhand der erkannten Regelmäßigkeiten können \nneue Datenpunkte einsortiert werden\nEine Maschine lernt an Beispielen, eine Aufgabe \nselbständig auszuführen."
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   6
+  ],
+  "text": "[Seite 6]\nDie Ursprungsdaten\nWoher kommen sie? \n•Selbst erhoben: Firmenintern oder Kundendaten\n•Von einem Datenlieferanten\n•... freie Datensätze zum Lernen und Testen\nSind sie vollständig oder eine Auswahl?\n•Unvollständige Datensätze spiegeln die Wirklichkeit \nu.U. verzerrt wieder"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   7
+  ],
+  "text": "[Seite 7]\nEin Datensatz\n•Format: Üblicherweise CSV oder Datenbank (leider oft \nauch Excel)\n•Jede Zeile ein Datenpunkt\n•Datenpunkte haben möglicherweise eine ID\n•Datenpunkte haben Merkmale (Features, Attribute)\n•Datenpunkte haben möglicherweise eine Zielklasse \n(meist nicht besonders gekennzeichnet)\n•Bedeutung der Merkmale und die Zielklasse \nerschließen sich meist nur aus Zusatzinformation"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   8,
+   9
+  ],
+  "text": "[Seite 8]\nEin Datensatz\n[Seite 9]\nAufgabe: Speed Dating\n•Wir werden diese Woche mit einem frei verfügbaren Datensatz \narbeiten (s. Moodle).\n•Schauen Sie sich die Datei speeddatinginfoan und finden Sie \nso viel wie möglich über die Daten heraus.\n•Beantworten Sie die Fragen im Moodle-Test."
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   10,
+   11
+  ],
+  "text": "[Seite 10]\nMaschinelles Lernen\n[Seite 11]\nÜbersicht\n•Was ist Maschinelles Lernen?\n•Wie können Daten aussehen?\n•Was kann man mit ihnen machen?\n•Klassifikation\n•Evaluation"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   12
+  ],
+  "text": "[Seite 12]\nKlassifikation\n•Instanzen sollen Klassen zugeordnet werden\n•Instanzen haben Merkmale, die die Zuordnung \nermöglichen\n•Farbe: rot, grün, blau\n•Form: Dreieck, Kreis, Quadrat\nKlasse 1 Klasse 2"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   13
+  ],
+  "text": "[Seite 13]\nEinfache Klassifikationsregel\n•Betrachten der Instanzen in den beiden Klassen: Gibt \nes Regelmäßigkeiten?\n•einfache Regel: rote Dreiecke gehören in Klasse 1, \nalle anderen Formen in Klasse 2\nKlasse 1 Klasse 2"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   14
+  ],
+  "text": "[Seite 14]\nKlassifikation neuer Instanzen\n•Regel anwenden: rote Dreiecke gehören in Klasse 1, \nalle anderen Formen in Klasse 2\nKlasse 1 Klasse 2"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   15
+  ],
+  "text": "[Seite 15]\nLernalgorithmen\n•Das Erstellen und Anwenden der Klassifikationsregeln \nübernehmen Lernalgorithmen\n•Unsere Aufgabe ist das Bereitstellen von ausreichend \nTrainingsdaten mit informativen Attributen"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   16
+  ],
+  "text": "[Seite 16]\nAuswahl des Algorithmus\n•Das Erstellen und Anwenden der Klassifikationsregeln \nübernehmen Lernalgorithmen\n•Unsere Aufgabe ist das Bereitstellen von ausreichend \nTrainingsdaten, die informativ sind\n•Alle Zielklassen hinreichend oft vertreten\n•Instanzen hinreichend unterschiedlich\n•Je komplexer der Lernalgorithmus, desto mehr Datenbedarf\n•Hype-Algorithmen sind nicht immer die beste Wahl\n•Meist sehr komplex: Datenbedarf, hoher Rechenaufwand\n•Konkret: DeepLearning braucht viele Daten, trainiert auf GPUs und ist \nschwer zu interpretieren"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   17
+  ],
+  "text": "[Seite 17]\nUnser Beispiel: Entscheidungsbäume\n•An jedem Knoten wird eine Frage gestellt\n•Je nach Antwort geht es mit einem der Zweige weiter\n•Die Blätter stellen das jeweilige \nKlassifikationsergebnis dar"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   18
+  ],
+  "text": "[Seite 18]\nEntscheidungsbaum: \nBild-Upload in Wikipedia\nVon odder-ownwork, basedon pngversionoriginallyuploadedtotheCommonsbySan Jose, Gemeinfrei, \nhttps://commons.wikimedia.org/w/index.php?curid=1910571"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   19
+  ],
+  "text": "[Seite 19]\nGelernte Entscheidungsbäume\n•Entscheidungsbaum allgemein: vom Experten erstellt, um \nEntscheidungen zu veranschaulichen  (s.o.)\n•Entscheidungsbaum im ML: auf Basis der Trainingsdaten erstellt, \num für Testdaten Voraussagen zu machen\n•Suchen Merkmale und Merkmalskombinationen, die besonders \nschnell zu einer Klassifikationsaussage führen\n•Gelernter Baum wird zur Klassifikation neuer Instanzen eingesetzt\n•Baum ist vom Menschen interpretierbar: Entscheidung kann erklärt \nwerden, Datenmuster werden klar"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   20,
+   21,
+   22
+  ],
+  "text": "[Seite 20]\nDemo: Entscheidungsbaum in Python\n[Seite 21]\nMaschinelles Lernen\n[Seite 22]\nÜbersicht\n•Was ist Maschinelles Lernen?\n•Wie können Daten aussehen?\n•Was kann man mit ihnen machen?\n•Klassifikation\n•Evaluation"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   23
+  ],
+  "text": "[Seite 23]\nWie testen?\n•Modell ist trainiert, kann verwendet werden\n•Aber: Wie gut ist es?\n•Wir brauchen Testdaten -hier kennen wir die Zielklassen\n•Vergleich Vorhersage –echter Wert möglich"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   24
+  ],
+  "text": "[Seite 24]\nWarum separate Testdaten?\n•Nehmen wir doch das Trainingsset!\n•Trainingsset ist groß\n•Klassen sind bekannt\n•Probleme:\n•Trainingsinstanzen sind alle schon gesehen: Hohe WK, dass \nman sie richtig macht\n•Der Ernstfall wird anders aussehen!"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   25
+  ],
+  "text": "[Seite 25]\nTestdaten erstellen\n•Ursprungsdatensatz wird vor dem ersten Training geteilt,\nz.B. 90%-10% oder 66%-33%\n•Daten sind im Training ungesehen –genau wie unsere zu \nklassifizierenden Daten später im produktiven Einsatz\n•Trainings-und Testdaten sind sich sehr ähnlich: fairer Test\n•Trainingsdatensatz wird kleiner!"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   26
+  ],
+  "text": "[Seite 26]\nEntwicklungsdaten erstellen\n•Wenn wir bei der Entwicklung unseres Modells verschiedene \nVarianten vergleichen wollen (neue Attribute, verschiedene \nLernalgorithmen, verschiedene Parameter der Algorithmen), \nbrauchen wir Testdaten zum Vergleich\n•Die reservierten Testdaten dürfen wir nicht nehmen: Sonst sind sie \nja nicht mehr ungesehen...\n•Ursprungsdatensatz vor dem ersten Training in drei Teile teilen:\nz.B. 80%-10%-10% oder 60%-20%-20%\n•Achtung: Die Entwicklungs-und Testanteile müssen so groß sein, \ndass man sinnvolle Aussagen ableiten kann (daher: je größer der \nDatensatz, desto kleiner die Entwicklungs-und Testanteile)"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   27
+  ],
+  "text": "[Seite 27]\nGelerntes Modell evaluieren\n•Standardmaße: Precision, Recall, F-Wert\n•Precision und Recall werden immer aus Sicht einer bestimmten \nZielklasse berechnet \n•Beschreiben unterschiedliche Eigenschaften der Vorhersage\n•F-Wert kombiniert beide in eine Zahl: \n•Um die Gesamtperformanz über alle Klassen zu beschreiben, \nkönnen P, R, F gemittelt werden\n2⋅P⋅R\nP+R"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   28
+  ],
+  "text": "[Seite 28]\nPrecision und Recall\n•Precision: Wie verlässlich ist die Vorhersage von Klasse A?\n•Wenn ich 100x Klasse A vorhergesagt habe, wie oft hat es gestimmt?\n•90x: Vorhersage ist sehr zuverlässig\n•20x: Hände weg...\n•Recall: Wie viele Instanzen wurden wirklich gefunden?\n•Wenn ich 100 Instanzen von Klasse A in den Testdaten hatte, wie viele \nwurden gefunden?\n•90: Fast alle erwischt, prima!\n•20: Zu viel verpasst"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   29
+  ],
+  "text": "[Seite 29]\nPrecision und Recall: Beispiel\n•Ihre Beratungsfirma hat ein Projekt mit einem Sicherheitsdienst. \nEs sollen per Videoüberwachung verdächtige Personen \nidentifiziert werden.\n•Recall der Klasse „verdächtig“ ist 90%! Ihnen entwischt quasi \nniemand.\n•Precision ist aber nur 10%... 9 von 10 Alarmen sind falsch. Alle \nsind genervt."
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   30
+  ],
+  "text": "[Seite 30]\nPrecision und Recall: Beispiel II\n•Sie trainieren einen Spamfilter für Ihre Emails. \n•Precision der Klasse „kein Spam“ ist 90%! Nie wieder Müll J\n•Recall ist aber nur 60%... Schon drei lukrative Jobangebote \nverpasst unddie Erbtante verärgert!"
+ },
+ {
+  "source": "1_lernen_evaluation.pdf",
+  "pages": [
+   31,
+   32
+  ],
+  "text": "[Seite 31]\nTesten und Entwickeln\nAblauf: \n•Modell trainieren\n•Modell testen (auf den Entwicklungsdaten)\n•Fehleranalyse\n•Modell verbessern (neue Attribute, ...)\n•wieder von vorn...\nAm Schluss:\n•Modell testen (auf den ungesehenen Testdaten)\n•Ergebnis als Precision, Recall, F-Wert berichten\n[Seite 32]\nDemo: Entscheidungsbaum in Wekatesten"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   1,
+   2
+  ],
+  "text": "[Seite 1]\nNeuronale Netze\n[Seite 2]\nThemen heute\n•Künstliche neuronale Netze (kNNs) und Deep Learning\n•Einfachste Netze: Das einschichtige Perzeptron\n•Realistische Beispiele: Verwendung von kNNs in der Praxis"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   3
+  ],
+  "text": "[Seite 3]\nKünstliche neuronale Netze\nOrientierung an biologischen Strukturen: Auf der Suche nach schneller, \nhochparalleler Verarbeitung wie im Gehirn\n•Umsetzung abstrahiert biologisches Vorbild deutlich\n•Trotzdem Verwendung u.a. in der Psycholinguistik, um menschliches \nLernen anzunähern"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   4
+  ],
+  "text": "[Seite 4]\nGrundlegende Idee\n•Alle Netze bestehen aus\n•Knoten (Neuronen)\n•Verbindungen (Synapsen) mit Gewichten\n•Netze haben mindestens Ein- und Ausgabeschicht\n•Verarbeitung von Information durch Weitergabe von \nNeuron-Aktivierung entlang der Verbindungen\nBild: Lee et al., PLoS Biology Vol. 4, No. 2"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   5
+  ],
+  "text": "[Seite 5]\nKünstliche Neuronale Netze: \nHistorie\n•Erste Ansätze: Entwicklung des Perzeptrons in den \n60ern (Rosenblatt 1962); Einschränkung des \nPerzeptrons wird erkannt\n•Mehrlagige Netze in den späten 80ern/frühen 90ern \n(Rumelhart, Hinton, Williams 1986)\n•Rechenintensiv: Dornröschenschlaf ab Mitte der 90er \n•Renaissance seit Hinton, Osindero und Teh (2006) als \n„Deep Learning“: Schnelle Algorithmen sind für große \nDatenmengen anwendbar"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   6
+  ],
+  "text": "[Seite 6]\nEinfache Netze: Perzeptrons\n•Neuronen bilden Eingabe- und Ausgabeschicht, keine \nverborgenen Schichten\n•Neuronen sind zwischen den Schichten vollständig \nvernetzt\n•Gewichte der Verbindungen sind\nzunächst zufällig und werden \nwährend des Trainings angepasst"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   7
+  ],
+  "text": "[Seite 7]\nAktivierung\n•Die Aktivierung des einzelnen Neurons hängt von der \nAktivierung über die Eingabeneuronen ab\n•Die Input-Aktivierung wird über eine\nAktivierungsfunktion (z.B. eine Sigmoid-Funktion) in \ndie finale Aktivierung des Neurons übersetzt\n•Analogie aus der Biologie: Ein \ngewisses Maß an Aktivierung muss\ngegeben sein, bevor ein Neuron \nfeuert"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   8
+  ],
+  "text": "[Seite 8]\nInterpretation der Ausgabe\nVor dem Hintergrund einer Klassifikationsaufgabe (Input gehört \nzu Klasse 1 oder nicht):\n•Am Einfachsten: einziges Perzeptron-Ausgabeneuron feuert vs. \nfeuert nicht\n•Komplizierter: Mehrere Ausgabeneuronen feuern in einem \nbestimmten Muster \n•Beispiel: 4 Neuronen, aus-an-an-aus heißt „Klasse 1 liegt vor“"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   9
+  ],
+  "text": "[Seite 9]\nEinschränkung des Perzeptrons:\nNicht linear separierbare Probleme\nMit einer einzigen \nEntscheidungslinie \nlösbar\nNicht mit einer einzigen \nEntscheidungslinie \nlösbar\nLinear separierbar (oder separabel) \nsind Klassifikationsprobleme, bei \ndenen eine einzige Entscheidungs-\nlinie im Raum ausreicht, um die \nbeiden Zielklassen klar zu trennen.\nNur diese Problemklasse \nbeherrschen einschichtige \nPerzeptrons. \nAbbildungen auf dieser und der folgenden Folie von https://playground.tensorflow.org"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   10
+  ],
+  "text": "[Seite 10]\nErweiterung des Perzeptrons\n•Realistische Netzwerkarchitekturen bestehen aus vielen \nNeuronenschichten\n•Jede weitere Schicht erweitert die Lernfähigkeit des Netzwerks\n•Mehrschichtige Perzeptrons lösen auch linear separable Probleme"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   11
+  ],
+  "text": "[Seite 11]\nEinfaches Beispiel: \nNeuronales Netz zur Textklassifikation\n•Eingabeschicht (ganz links) \nerhält Textrepräsentation als \nEingabeaktivierung\n•Aktivierung der folgenden \nSchichten wird aus den \nEingabeaktivierungen der \nVorgängerschicht, den \nVerbindungsgewichten und \nder Aktivierungsfunktion \nberechnet\n•Aktivierung der \nAusgabeschicht (ganz rechts) \nwird als Klassifikations-\nentscheidung interpretiert  \nAbbildung auf dieser und den folgenden Folien von www.machinelearningforkids.co.uk"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   12
+  ],
+  "text": "[Seite 12]\nNeuronales Netz zur Textklassifikation:\nEingaberepräsentation\n•Textrepräsentation für die \nEingabeschicht: Vektor von \nWorthäufigkeiten"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   13
+  ],
+  "text": "[Seite 13]\nNeuronales Netz zur Textklassifikation:\nAktivierung\nAktivierung der folgenden Schichten wird aus \n•Einem Knotenbias b (ähnlich einer Voraktivierung),\n•den Eingabeaktivierungen der Vorgängerschicht, \n•den Verbindungsgewichten und \n•der Aktivierungsfunktion (hier linear: x1) \nberechnet"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   14
+  ],
+  "text": "[Seite 14]\nNeuronales Netz zur Textklassifikation:\nAusgabe\nInterpretation der Ausgabe: \nHier: Stärker aktivierter Knoten “zählt“"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   15
+  ],
+  "text": "[Seite 15]\n•Lernen bedeutet, die Verbindungsgewichte und ggf. Biases so \nanzupassen, dass für jeden Input die korrekte Aktivierung in \nder letzten Netzwerkschicht generiert wird\n•Strategie des Gradient Descent: Abstieg auf der unebenen \nFehlerfläche, möglicherweise in ein lokales Optimum\n(Gradient Descent-Demo)\n•Steuerung der Lerngeschwindigkeit u.a. durch die Learning \nRate\nLernen mit Neuronalen Netzwerken"
+ },
+ {
+  "source": "2_neuronale_netze.pdf",
+  "pages": [
+   16
+  ],
+  "text": "[Seite 16]\nBedeutung von Neuronalen Netzwerken\n•Sehr flexibler und mächtiger Lernalgorithmus\n•Quasi-Standard für viele Anwendungen (Bildverarbeitung, \nVerstehen gesprochener Sprache, maschinelle Übersetzung)\n•Intensive Forschung an der Interpretierbarkeit"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   1,
+   2
+  ],
+  "text": "[Seite 1]\nNeuronale Netze\n[Seite 2]\nAnwendung 1: Objekterkennung(Lee et al., ICML 2009)\n•Repräsentation der Lernergebnisse \nverschiedener Schichten bei der \nObjekterkennung\n•Schicht 1 lernt, Kanten zu erkennen\n•Schicht 2 erkennt Teilareale\n•Schicht 3 repräsentiert das ganze \nGesicht \n#4 Learning multiple levels \nof representation \n12% Schicht 1\nSchicht 2\nSchicht 3"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   3
+  ],
+  "text": "[Seite 3]\nAnwendung 2: Gesprochene Sprache \nverstehen\n•Keine leichte Aufgabe (vgl. Telefonieren in einer Fremdsprache)\n•Probleme: Tonqualität, Akzente/Dialekte, freier Wortschatz\n•Seit 2017 sind neuronale Netze besser als menschliche \nTranskriptoren... (Xiong et al., IEEE ICASSP 2018)\n•Wichtig: Rekurrente Netzwerke, die die Reihenfolge der \nEingabesignale berücksichtigen und sich an zurückliegende \nSignale „erinnern“: Kontext!"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   4
+  ],
+  "text": "[Seite 4]\nAnwendung 3: Übersetzung\n•Hochkomplexe neuronale Netze codieren den Input und \nübersetzen ihn in eine abstrakte innere Repräsentation \n(zusammen: Encoder)\n•Die innere Repräsentation wird dann wieder in den \ngewünschten Output zurückverwandelt (Decoder)\n•Beides zusammen heißt Transformer (und verwandelt \nz.B. Deutsch nach Englisch)\n•Wichtige Neuerung: Attention. Das Netzwerk kann je \nnach Kontext die Teile des Inputs höher gewichten.\n•Der Eingabetext wird als Embeddings repräsentiert – \ndas ist eine von Netzwerken gelernte Repräsentation auf \nBasis der Verteilung von Wörtern in Texten\nTransformer-Architektur \n(Vaswani et al 2017)"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   5
+  ],
+  "text": "[Seite 5]\nSeltene Sprachen übersetzen \n(Bapna et al. 2022, Google White Paper)\n•Schritt 1: Transformer für Übersetzungen zwischen (112) \nhäufigen Sprachen trainieren \n-> überwachtes Lernen, Lösung bekannt, gute Ergebnisse\n•Schritt 2: Diesen Transformer weitertrainieren: Aufgabe jetzt \nWortvorhersage für 200 seltenere Sprachen\n•Übersetzung wird für diese 200 Sprachen noch besser, wenn \nman mit weiteren 800 seltenen Sprachen weitertrainiert; \nÜbersetzung ist nun zwischen allen 1000 Sprachen möglich\n•Fazit: Die innere Repräsentation des Modells profitiert von \njeder Art von Input, ist sprachunabhängig\nDer Hund bellt.  \nLe chien aboye.\nDen ??? blaft  \n    Hond"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   6
+  ],
+  "text": "[Seite 6]\nAnwendung 4: \nSprachmodelle auf Transformer-Basis(OpenAI 2023, White Paper)\nEm-\nbeddings\nDecoder-Part des \nTransformers\nWortvor-\nhersage\n„Was weißt du \nüber Stuttgart?“\n„Stuttgart ist die \nHauptstadt von \n…“\nBaden-Württemberg\nKehrwoche\nDeutschland\n👎\n👎\n👍\n•Grundlage der GPT-Modelle\n•… und Llama, DeepSeek, …"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   7
+  ],
+  "text": "[Seite 7]\nOder mit mehr Detail:\nTransformer-Explainer https://poloclub.github.io/transformer-explainer/\nEmbeddings Decoder-Part des Transformers Wortvorhersage"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   8
+  ],
+  "text": "[Seite 8]\n•Großer Unterschied zu früheren Ansätzen: Merkmale müssen nicht \n(stark) aufbereitet werden\n•Bilder werden als Pixel repräsentiert \nØ1 bis 3 Eingabeknoten pro Pixel (b-w oder rgb)\n•Texte werden als (Unter-)Zeichenketten repräsentiert\nØEmbeddings\n•Große Fähigkeit der Modelle, Muster aus den Eingabedaten \neigenständig zu erkennen\nVorteile von Neuronalen Netzwerken"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   9
+  ],
+  "text": "[Seite 9]\nNachteile von Neuronalen Netzen\n•Hoher Bedarf an Trainingsdaten\n•Starke Abhängigkeit des Ergebnisses von optimaler \nParametrisierung (initiale Gewichte, Trainingsgeschwindigkeit, ...)\n•Hoher Bedarf an Rechenkapazität\n•Noch „black box“; schlechte Interpretierbarkeit"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   10
+  ],
+  "text": "[Seite 10]\nNeuronale Netze\n•Mächtiger Algorithmus\n•Mächtiger Bedarf an Trainingsdaten, Parameteroptimierung und \nRechenzeit...\n•Mittlerweile vorfabriziert und vortrainiert verfügbar\n•Schwer zu interpretieren\n•Faszinierende Technologie für Forschung und Produktion!"
+ },
+ {
+  "source": "3_neuronale_netze_anwendung.pdf",
+  "pages": [
+   11
+  ],
+  "text": "[Seite 11]\n26\nLiteratur\n•Alpaydin, Maschinelles Lernen, de Gruyter/Oldenbourg, 2008.\n•Mitchell, Machine Learning, McGraw-Hill, 1997."
+ }
+]

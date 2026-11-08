@@ -1,0 +1,496 @@
+===== 1_lernen_evaluation.pdf =====
+[Seite 1]
+Maschinelles Lernen
+[Seite 2]
+Übersicht
+•Was ist Maschinelles Lernen?
+•Wie können Daten aussehen?
+•Was kann man mit ihnen machen?
+[Seite 3]
+Rückblick: Was ist I?
+Intelligenz: „theabilitytoperceiveorinferinformation, andtoretainit
+asknowledge tobeappliedtowardsadaptive behaviors“ (Wikipedia, 
+2021)
+•perceive: sehen, hören, Sprache verstehen
+•infer: logisches Schließen, Schließen unter Unsicherheit
+•retain: lernen
+•knowledge: Wissensrepräsentationen
+•tobeapplied: selbstgesteuertes Verhalten
+•adaptive behavior: angemessene Reaktion auf neue Situationen, dabei 
+Umsetzen der eigenen Ziele
+[Seite 4]
+Was ist Maschinelles Lernen?
+Die Aufgabe: 
+•Daten klassifizieren (z.B. Junk-Mail-Filter)
+•Zahlenwerte vorhersagen (z.B. Börsenkurse)
+Eine Maschine lernt an Beispielen, eine Aufgabe 
+selbständig auszuführen.
+[Seite 5]
+Was ist Maschinelles Lernen?
+Die Aufgabe: Daten klassifizieren
+•Beispieldaten werden gegeben
+•Datenpunkte haben Attribute und eine Zielklasse
+•Computer sucht Regelmäßigkeiten: Wann wird ein 
+Datenpunkt einer Klasse zugeordnet?
+•Anhand der erkannten Regelmäßigkeiten können 
+neue Datenpunkte einsortiert werden
+Eine Maschine lernt an Beispielen, eine Aufgabe 
+selbständig auszuführen.
+[Seite 6]
+Die Ursprungsdaten
+Woher kommen sie? 
+•Selbst erhoben: Firmenintern oder Kundendaten
+•Von einem Datenlieferanten
+•... freie Datensätze zum Lernen und Testen
+Sind sie vollständig oder eine Auswahl?
+•Unvollständige Datensätze spiegeln die Wirklichkeit 
+u.U. verzerrt wieder
+[Seite 7]
+Ein Datensatz
+•Format: Üblicherweise CSV oder Datenbank (leider oft 
+auch Excel)
+•Jede Zeile ein Datenpunkt
+•Datenpunkte haben möglicherweise eine ID
+•Datenpunkte haben Merkmale (Features, Attribute)
+•Datenpunkte haben möglicherweise eine Zielklasse 
+(meist nicht besonders gekennzeichnet)
+•Bedeutung der Merkmale und die Zielklasse 
+erschließen sich meist nur aus Zusatzinformation
+[Seite 8]
+Ein Datensatz
+[Seite 9]
+Aufgabe: Speed Dating
+•Wir werden diese Woche mit einem frei verfügbaren Datensatz 
+arbeiten (s. Moodle).
+•Schauen Sie sich die Datei speeddatinginfoan und finden Sie 
+so viel wie möglich über die Daten heraus.
+•Beantworten Sie die Fragen im Moodle-Test.
+[Seite 10]
+Maschinelles Lernen
+[Seite 11]
+Übersicht
+•Was ist Maschinelles Lernen?
+•Wie können Daten aussehen?
+•Was kann man mit ihnen machen?
+•Klassifikation
+•Evaluation
+[Seite 12]
+Klassifikation
+•Instanzen sollen Klassen zugeordnet werden
+•Instanzen haben Merkmale, die die Zuordnung 
+ermöglichen
+•Farbe: rot, grün, blau
+•Form: Dreieck, Kreis, Quadrat
+Klasse 1 Klasse 2
+[Seite 13]
+Einfache Klassifikationsregel
+•Betrachten der Instanzen in den beiden Klassen: Gibt 
+es Regelmäßigkeiten?
+•einfache Regel: rote Dreiecke gehören in Klasse 1, 
+alle anderen Formen in Klasse 2
+Klasse 1 Klasse 2
+[Seite 14]
+Klassifikation neuer Instanzen
+•Regel anwenden: rote Dreiecke gehören in Klasse 1, 
+alle anderen Formen in Klasse 2
+Klasse 1 Klasse 2
+[Seite 15]
+Lernalgorithmen
+•Das Erstellen und Anwenden der Klassifikationsregeln 
+übernehmen Lernalgorithmen
+•Unsere Aufgabe ist das Bereitstellen von ausreichend 
+Trainingsdaten mit informativen Attributen
+[Seite 16]
+Auswahl des Algorithmus
+•Das Erstellen und Anwenden der Klassifikationsregeln 
+übernehmen Lernalgorithmen
+•Unsere Aufgabe ist das Bereitstellen von ausreichend 
+Trainingsdaten, die informativ sind
+•Alle Zielklassen hinreichend oft vertreten
+•Instanzen hinreichend unterschiedlich
+•Je komplexer der Lernalgorithmus, desto mehr Datenbedarf
+•Hype-Algorithmen sind nicht immer die beste Wahl
+•Meist sehr komplex: Datenbedarf, hoher Rechenaufwand
+•Konkret: DeepLearning braucht viele Daten, trainiert auf GPUs und ist 
+schwer zu interpretieren
+[Seite 17]
+Unser Beispiel: Entscheidungsbäume
+•An jedem Knoten wird eine Frage gestellt
+•Je nach Antwort geht es mit einem der Zweige weiter
+•Die Blätter stellen das jeweilige 
+Klassifikationsergebnis dar
+[Seite 18]
+Entscheidungsbaum: 
+Bild-Upload in Wikipedia
+Von odder-ownwork, basedon pngversionoriginallyuploadedtotheCommonsbySan Jose, Gemeinfrei, 
+https://commons.wikimedia.org/w/index.php?curid=1910571
+[Seite 19]
+Gelernte Entscheidungsbäume
+•Entscheidungsbaum allgemein: vom Experten erstellt, um 
+Entscheidungen zu veranschaulichen  (s.o.)
+•Entscheidungsbaum im ML: auf Basis der Trainingsdaten erstellt, 
+um für Testdaten Voraussagen zu machen
+•Suchen Merkmale und Merkmalskombinationen, die besonders 
+schnell zu einer Klassifikationsaussage führen
+•Gelernter Baum wird zur Klassifikation neuer Instanzen eingesetzt
+•Baum ist vom Menschen interpretierbar: Entscheidung kann erklärt 
+werden, Datenmuster werden klar
+[Seite 20]
+Demo: Entscheidungsbaum in Python
+[Seite 21]
+Maschinelles Lernen
+[Seite 22]
+Übersicht
+•Was ist Maschinelles Lernen?
+•Wie können Daten aussehen?
+•Was kann man mit ihnen machen?
+•Klassifikation
+•Evaluation
+[Seite 23]
+Wie testen?
+•Modell ist trainiert, kann verwendet werden
+•Aber: Wie gut ist es?
+•Wir brauchen Testdaten -hier kennen wir die Zielklassen
+•Vergleich Vorhersage –echter Wert möglich
+[Seite 24]
+Warum separate Testdaten?
+•Nehmen wir doch das Trainingsset!
+•Trainingsset ist groß
+•Klassen sind bekannt
+•Probleme:
+•Trainingsinstanzen sind alle schon gesehen: Hohe WK, dass 
+man sie richtig macht
+•Der Ernstfall wird anders aussehen!
+[Seite 25]
+Testdaten erstellen
+•Ursprungsdatensatz wird vor dem ersten Training geteilt,
+z.B. 90%-10% oder 66%-33%
+•Daten sind im Training ungesehen –genau wie unsere zu 
+klassifizierenden Daten später im produktiven Einsatz
+•Trainings-und Testdaten sind sich sehr ähnlich: fairer Test
+•Trainingsdatensatz wird kleiner!
+[Seite 26]
+Entwicklungsdaten erstellen
+•Wenn wir bei der Entwicklung unseres Modells verschiedene 
+Varianten vergleichen wollen (neue Attribute, verschiedene 
+Lernalgorithmen, verschiedene Parameter der Algorithmen), 
+brauchen wir Testdaten zum Vergleich
+•Die reservierten Testdaten dürfen wir nicht nehmen: Sonst sind sie 
+ja nicht mehr ungesehen...
+•Ursprungsdatensatz vor dem ersten Training in drei Teile teilen:
+z.B. 80%-10%-10% oder 60%-20%-20%
+•Achtung: Die Entwicklungs-und Testanteile müssen so groß sein, 
+dass man sinnvolle Aussagen ableiten kann (daher: je größer der 
+Datensatz, desto kleiner die Entwicklungs-und Testanteile)
+[Seite 27]
+Gelerntes Modell evaluieren
+•Standardmaße: Precision, Recall, F-Wert
+•Precision und Recall werden immer aus Sicht einer bestimmten 
+Zielklasse berechnet 
+•Beschreiben unterschiedliche Eigenschaften der Vorhersage
+•F-Wert kombiniert beide in eine Zahl: 
+•Um die Gesamtperformanz über alle Klassen zu beschreiben, 
+können P, R, F gemittelt werden
+2⋅P⋅R
+P+R
+[Seite 28]
+Precision und Recall
+•Precision: Wie verlässlich ist die Vorhersage von Klasse A?
+•Wenn ich 100x Klasse A vorhergesagt habe, wie oft hat es gestimmt?
+•90x: Vorhersage ist sehr zuverlässig
+•20x: Hände weg...
+•Recall: Wie viele Instanzen wurden wirklich gefunden?
+•Wenn ich 100 Instanzen von Klasse A in den Testdaten hatte, wie viele 
+wurden gefunden?
+•90: Fast alle erwischt, prima!
+•20: Zu viel verpasst
+[Seite 29]
+Precision und Recall: Beispiel
+•Ihre Beratungsfirma hat ein Projekt mit einem Sicherheitsdienst. 
+Es sollen per Videoüberwachung verdächtige Personen 
+identifiziert werden.
+•Recall der Klasse „verdächtig“ ist 90%! Ihnen entwischt quasi 
+niemand.
+•Precision ist aber nur 10%... 9 von 10 Alarmen sind falsch. Alle 
+sind genervt.
+[Seite 30]
+Precision und Recall: Beispiel II
+•Sie trainieren einen Spamfilter für Ihre Emails. 
+•Precision der Klasse „kein Spam“ ist 90%! Nie wieder Müll J
+•Recall ist aber nur 60%... Schon drei lukrative Jobangebote 
+verpasst unddie Erbtante verärgert!
+[Seite 31]
+Testen und Entwickeln
+Ablauf: 
+•Modell trainieren
+•Modell testen (auf den Entwicklungsdaten)
+•Fehleranalyse
+•Modell verbessern (neue Attribute, ...)
+•wieder von vorn...
+Am Schluss:
+•Modell testen (auf den ungesehenen Testdaten)
+•Ergebnis als Precision, Recall, F-Wert berichten
+[Seite 32]
+Demo: Entscheidungsbaum in Wekatesten
+
+===== 2_neuronale_netze.pdf =====
+[Seite 1]
+Neuronale Netze
+[Seite 2]
+Themen heute
+•Künstliche neuronale Netze (kNNs) und Deep Learning
+•Einfachste Netze: Das einschichtige Perzeptron
+•Realistische Beispiele: Verwendung von kNNs in der Praxis
+[Seite 3]
+Künstliche neuronale Netze
+Orientierung an biologischen Strukturen: Auf der Suche nach schneller, 
+hochparalleler Verarbeitung wie im Gehirn
+•Umsetzung abstrahiert biologisches Vorbild deutlich
+•Trotzdem Verwendung u.a. in der Psycholinguistik, um menschliches 
+Lernen anzunähern
+[Seite 4]
+Grundlegende Idee
+•Alle Netze bestehen aus
+•Knoten (Neuronen)
+•Verbindungen (Synapsen) mit Gewichten
+•Netze haben mindestens Ein- und Ausgabeschicht
+•Verarbeitung von Information durch Weitergabe von 
+Neuron-Aktivierung entlang der Verbindungen
+Bild: Lee et al., PLoS Biology Vol. 4, No. 2
+[Seite 5]
+Künstliche Neuronale Netze: 
+Historie
+•Erste Ansätze: Entwicklung des Perzeptrons in den 
+60ern (Rosenblatt 1962); Einschränkung des 
+Perzeptrons wird erkannt
+•Mehrlagige Netze in den späten 80ern/frühen 90ern 
+(Rumelhart, Hinton, Williams 1986)
+•Rechenintensiv: Dornröschenschlaf ab Mitte der 90er 
+•Renaissance seit Hinton, Osindero und Teh (2006) als 
+„Deep Learning“: Schnelle Algorithmen sind für große 
+Datenmengen anwendbar
+[Seite 6]
+Einfache Netze: Perzeptrons
+•Neuronen bilden Eingabe- und Ausgabeschicht, keine 
+verborgenen Schichten
+•Neuronen sind zwischen den Schichten vollständig 
+vernetzt
+•Gewichte der Verbindungen sind
+zunächst zufällig und werden 
+während des Trainings angepasst
+[Seite 7]
+Aktivierung
+•Die Aktivierung des einzelnen Neurons hängt von der 
+Aktivierung über die Eingabeneuronen ab
+•Die Input-Aktivierung wird über eine
+Aktivierungsfunktion (z.B. eine Sigmoid-Funktion) in 
+die finale Aktivierung des Neurons übersetzt
+•Analogie aus der Biologie: Ein 
+gewisses Maß an Aktivierung muss
+gegeben sein, bevor ein Neuron 
+feuert
+[Seite 8]
+Interpretation der Ausgabe
+Vor dem Hintergrund einer Klassifikationsaufgabe (Input gehört 
+zu Klasse 1 oder nicht):
+•Am Einfachsten: einziges Perzeptron-Ausgabeneuron feuert vs. 
+feuert nicht
+•Komplizierter: Mehrere Ausgabeneuronen feuern in einem 
+bestimmten Muster 
+•Beispiel: 4 Neuronen, aus-an-an-aus heißt „Klasse 1 liegt vor“
+[Seite 9]
+Einschränkung des Perzeptrons:
+Nicht linear separierbare Probleme
+Mit einer einzigen 
+Entscheidungslinie 
+lösbar
+Nicht mit einer einzigen 
+Entscheidungslinie 
+lösbar
+Linear separierbar (oder separabel) 
+sind Klassifikationsprobleme, bei 
+denen eine einzige Entscheidungs-
+linie im Raum ausreicht, um die 
+beiden Zielklassen klar zu trennen.
+Nur diese Problemklasse 
+beherrschen einschichtige 
+Perzeptrons. 
+Abbildungen auf dieser und der folgenden Folie von https://playground.tensorflow.org
+[Seite 10]
+Erweiterung des Perzeptrons
+•Realistische Netzwerkarchitekturen bestehen aus vielen 
+Neuronenschichten
+•Jede weitere Schicht erweitert die Lernfähigkeit des Netzwerks
+•Mehrschichtige Perzeptrons lösen auch linear separable Probleme
+[Seite 11]
+Einfaches Beispiel: 
+Neuronales Netz zur Textklassifikation
+•Eingabeschicht (ganz links) 
+erhält Textrepräsentation als 
+Eingabeaktivierung
+•Aktivierung der folgenden 
+Schichten wird aus den 
+Eingabeaktivierungen der 
+Vorgängerschicht, den 
+Verbindungsgewichten und 
+der Aktivierungsfunktion 
+berechnet
+•Aktivierung der 
+Ausgabeschicht (ganz rechts) 
+wird als Klassifikations-
+entscheidung interpretiert  
+Abbildung auf dieser und den folgenden Folien von www.machinelearningforkids.co.uk
+[Seite 12]
+Neuronales Netz zur Textklassifikation:
+Eingaberepräsentation
+•Textrepräsentation für die 
+Eingabeschicht: Vektor von 
+Worthäufigkeiten
+[Seite 13]
+Neuronales Netz zur Textklassifikation:
+Aktivierung
+Aktivierung der folgenden Schichten wird aus 
+•Einem Knotenbias b (ähnlich einer Voraktivierung),
+•den Eingabeaktivierungen der Vorgängerschicht, 
+•den Verbindungsgewichten und 
+•der Aktivierungsfunktion (hier linear: x1) 
+berechnet
+[Seite 14]
+Neuronales Netz zur Textklassifikation:
+Ausgabe
+Interpretation der Ausgabe: 
+Hier: Stärker aktivierter Knoten “zählt“
+[Seite 15]
+•Lernen bedeutet, die Verbindungsgewichte und ggf. Biases so 
+anzupassen, dass für jeden Input die korrekte Aktivierung in 
+der letzten Netzwerkschicht generiert wird
+•Strategie des Gradient Descent: Abstieg auf der unebenen 
+Fehlerfläche, möglicherweise in ein lokales Optimum
+(Gradient Descent-Demo)
+•Steuerung der Lerngeschwindigkeit u.a. durch die Learning 
+Rate
+Lernen mit Neuronalen Netzwerken
+[Seite 16]
+Bedeutung von Neuronalen Netzwerken
+•Sehr flexibler und mächtiger Lernalgorithmus
+•Quasi-Standard für viele Anwendungen (Bildverarbeitung, 
+Verstehen gesprochener Sprache, maschinelle Übersetzung)
+•Intensive Forschung an der Interpretierbarkeit
+
+===== 3_neuronale_netze_anwendung.pdf =====
+[Seite 1]
+Neuronale Netze
+[Seite 2]
+Anwendung 1: Objekterkennung(Lee et al., ICML 2009)
+•Repräsentation der Lernergebnisse 
+verschiedener Schichten bei der 
+Objekterkennung
+•Schicht 1 lernt, Kanten zu erkennen
+•Schicht 2 erkennt Teilareale
+•Schicht 3 repräsentiert das ganze 
+Gesicht 
+#4 Learning multiple levels 
+of representation 
+12% Schicht 1
+Schicht 2
+Schicht 3
+[Seite 3]
+Anwendung 2: Gesprochene Sprache 
+verstehen
+•Keine leichte Aufgabe (vgl. Telefonieren in einer Fremdsprache)
+•Probleme: Tonqualität, Akzente/Dialekte, freier Wortschatz
+•Seit 2017 sind neuronale Netze besser als menschliche 
+Transkriptoren... (Xiong et al., IEEE ICASSP 2018)
+•Wichtig: Rekurrente Netzwerke, die die Reihenfolge der 
+Eingabesignale berücksichtigen und sich an zurückliegende 
+Signale „erinnern“: Kontext!
+[Seite 4]
+Anwendung 3: Übersetzung
+•Hochkomplexe neuronale Netze codieren den Input und 
+übersetzen ihn in eine abstrakte innere Repräsentation 
+(zusammen: Encoder)
+•Die innere Repräsentation wird dann wieder in den 
+gewünschten Output zurückverwandelt (Decoder)
+•Beides zusammen heißt Transformer (und verwandelt 
+z.B. Deutsch nach Englisch)
+•Wichtige Neuerung: Attention. Das Netzwerk kann je 
+nach Kontext die Teile des Inputs höher gewichten.
+•Der Eingabetext wird als Embeddings repräsentiert – 
+das ist eine von Netzwerken gelernte Repräsentation auf 
+Basis der Verteilung von Wörtern in Texten
+Transformer-Architektur 
+(Vaswani et al 2017)
+[Seite 5]
+Seltene Sprachen übersetzen 
+(Bapna et al. 2022, Google White Paper)
+•Schritt 1: Transformer für Übersetzungen zwischen (112) 
+häufigen Sprachen trainieren 
+-> überwachtes Lernen, Lösung bekannt, gute Ergebnisse
+•Schritt 2: Diesen Transformer weitertrainieren: Aufgabe jetzt 
+Wortvorhersage für 200 seltenere Sprachen
+•Übersetzung wird für diese 200 Sprachen noch besser, wenn 
+man mit weiteren 800 seltenen Sprachen weitertrainiert; 
+Übersetzung ist nun zwischen allen 1000 Sprachen möglich
+•Fazit: Die innere Repräsentation des Modells profitiert von 
+jeder Art von Input, ist sprachunabhängig
+Der Hund bellt.  
+Le chien aboye.
+Den ??? blaft  
+    Hond
+[Seite 6]
+Anwendung 4: 
+Sprachmodelle auf Transformer-Basis(OpenAI 2023, White Paper)
+Em-
+beddings
+Decoder-Part des 
+Transformers
+Wortvor-
+hersage
+„Was weißt du 
+über Stuttgart?“
+„Stuttgart ist die 
+Hauptstadt von 
+…“
+Baden-Württemberg
+Kehrwoche
+Deutschland
+👎
+👎
+👍
+•Grundlage der GPT-Modelle
+•… und Llama, DeepSeek, …
+[Seite 7]
+Oder mit mehr Detail:
+Transformer-Explainer https://poloclub.github.io/transformer-explainer/
+Embeddings Decoder-Part des Transformers Wortvorhersage
+[Seite 8]
+•Großer Unterschied zu früheren Ansätzen: Merkmale müssen nicht 
+(stark) aufbereitet werden
+•Bilder werden als Pixel repräsentiert 
+Ø1 bis 3 Eingabeknoten pro Pixel (b-w oder rgb)
+•Texte werden als (Unter-)Zeichenketten repräsentiert
+ØEmbeddings
+•Große Fähigkeit der Modelle, Muster aus den Eingabedaten 
+eigenständig zu erkennen
+Vorteile von Neuronalen Netzwerken
+[Seite 9]
+Nachteile von Neuronalen Netzen
+•Hoher Bedarf an Trainingsdaten
+•Starke Abhängigkeit des Ergebnisses von optimaler 
+Parametrisierung (initiale Gewichte, Trainingsgeschwindigkeit, ...)
+•Hoher Bedarf an Rechenkapazität
+•Noch „black box“; schlechte Interpretierbarkeit
+[Seite 10]
+Neuronale Netze
+•Mächtiger Algorithmus
+•Mächtiger Bedarf an Trainingsdaten, Parameteroptimierung und 
+Rechenzeit...
+•Mittlerweile vorfabriziert und vortrainiert verfügbar
+•Schwer zu interpretieren
+•Faszinierende Technologie für Forschung und Produktion!
+[Seite 11]
+26
+Literatur
+•Alpaydin, Maschinelles Lernen, de Gruyter/Oldenbourg, 2008.
+•Mitchell, Machine Learning, McGraw-Hill, 1997.
+
